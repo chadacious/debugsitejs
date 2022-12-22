@@ -12,8 +12,19 @@
         ],
         "persistent": true
     },
+    "content_scripts": [
+        {
+            "matches": [
+                "*://*.google.com/*"
+            ],
+            "js": [
+                "injectScript.js"
+            ]
+        }
+    ],
     "web_accessible_resources": [
-        "peacocktv_main.js"
+        "peacocktv_main.js",
+        "pcksig.js"
     ],
     "permissions": [
         "tabs",
